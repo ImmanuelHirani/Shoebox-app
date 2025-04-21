@@ -4,6 +4,8 @@
   /* Breakpoints */
 
   --breakpoint-xs: 30rem;
+  --breakpoint-md: 45rem;
+  --breakpoint-lg: 55rem;
   --breakpoint-xl: 75rem;
   --breakpoint-2xl: 90rem;
   --breakpoint-3xl: 110rem;
@@ -32,17 +34,17 @@
   }
 
   body {
-    @apply bg-primary;
+    @apply bg-primary text-accent;
   }
 
   /* Margin Rules each section */
 }
 
-@layer utilities {
-  html * {
-    @apply scroll-smooth text-white;
-  }
+html * {
+  @apply scroll-smooth  font-merchant;
+}
 
+@layer utilities {
   /* Fonts Rules */
   h1 {
     @apply 3xl:text-[120px] 2xl:text-[90px] xl:text-[80px] lg:text-[70px] md:text-[60px] text-[40px] font-merchant;
@@ -52,8 +54,12 @@
     @apply 3xl:text-[75px] 2xl:text-[65px] xl:text-[55px] lg:text-[45px] md:text-[35px] text-[25px] font-merchant;
   }
 
+  h4 {
+    @apply md:text-[26px] text-[20px] font-merchant;
+  }
+
   h5 {
-    @apply md:text-[20px] text-[15px] font-merchant;
+    @apply 3xl:text-[26px] md:text-[24px] text-[15px] font-merchant;
   }
 }
 
