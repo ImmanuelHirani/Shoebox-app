@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  /* Breakpoints */
+
+  --breakpoint-xs: 30rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 90rem;
+  --breakpoint-3xl: 110rem;
+
+  /* Colors */
+  --color-primary: #181818;
+  --color-secondary: #f68d1f;
+  --color-accent: #f5f5f5;
+  --color-success: #198754;
+  --color-info: #0dcaf0;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  /* Fonts */
+  --font-manrope: "manrope", sans-serif;
+  --font-merchant: "merchant", sans-serif;
+}
+
+@layer components {
+  /* Reusable Components */
+}
+
+@layer base {
+  .container {
+    @apply lg:p-0 p-4  m-auto;
+  }
+
+  body {
+    @apply bg-primary;
+  }
+
+  /* Margin Rules each section */
+}
+
+@layer utilities {
+  html * {
+    @apply scroll-smooth text-white;
+  }
+
+  /* Fonts Rules */
+  h1 {
+    @apply 3xl:text-[120px] 2xl:text-[90px] xl:text-[80px] lg:text-[70px] md:text-[60px] text-[40px] font-merchant;
+  }
+
+  h2 {
+    @apply 3xl:text-[75px] 2xl:text-[65px] xl:text-[55px] lg:text-[45px] md:text-[35px] text-[25px] font-merchant;
+  }
+
+  h5 {
+    @apply md:text-[20px] text-[15px] font-merchant;
+  }
+}
+
+/* Fonts */
+/*=========================*/
+/*        MANROPE         */
+/*=========================*/
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope/Manrope-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/*=========================*/
+/*        MERCHANT        */
+/*=========================*/
+@font-face {
+  font-family: "merchant";
+  src: url("../assets/fonts/merchant/Merchant-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "merchant";
+  src: url("../assets/fonts/merchant/Merchant-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "merchant";
+  src: url("../assets/fonts/merchant/Merchant-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "merchant";
+  src: url("../assets/fonts/merchant/Merchant-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
