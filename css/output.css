@@ -330,6 +330,9 @@
     --tw-translate-y: calc(1/2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
@@ -617,6 +620,11 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  .peer-open\:rotate-180 {
+    &:is(:where(.peer):is([open], :popover-open, :open) ~ *) {
+      rotate: 180deg;
+    }
+  }
   .peer-checked\:max-h-\[1000px\] {
     &:is(:where(.peer):checked ~ *) {
       max-height: 1000px;
@@ -896,6 +904,20 @@
   .\33 xl\:max-w-\[90rem\] {
     @media (width >= 110rem) {
       max-width: 90rem;
+    }
+  }
+  .peer-checked\:\[\&\>img\]\:rotate-90 {
+    &:is(:where(.peer):checked ~ *) {
+      &>img {
+        rotate: 90deg;
+      }
+    }
+  }
+  .peer-checked\:\[\&\>img\]\:rotate-180 {
+    &:is(:where(.peer):checked ~ *) {
+      &>img {
+        rotate: 180deg;
+      }
     }
   }
 }
