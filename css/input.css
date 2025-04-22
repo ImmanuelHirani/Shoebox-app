@@ -91,6 +91,10 @@ body::-webkit-scrollbar {
   h5 {
     @apply 3xl:text-[26px] md:text-[24px] text-[15px] font-merchant;
   }
+
+  h6 {
+    @apply 3xl:text-[20px] md:text-[18px] text-[16px];
+  }
 }
 
 /* Fonts */
