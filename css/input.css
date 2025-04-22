@@ -34,6 +34,27 @@
     @apply bg-primary text-accent;
   }
 
+  /* Chrome, Safari, Edge */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 1000px transparent !important;
+    box-shadow: inset 0 0 0px 1000px transparent !important;
+
+    /* force the fill color to white */
+    -webkit-text-fill-color: white !important;
+
+    /* kill the yellow flash */
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+
+  /* Firefox */
+  input:-moz-autofill,
+  textarea:-moz-autofill {
+    box-shadow: inset 0 0 0px 1000px transparent !important;
+    -moz-text-fill-color: white !important;
+  }
+  /* input end */
+
   /* Margin Rules each section */
 }
 
