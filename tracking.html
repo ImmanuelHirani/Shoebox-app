@@ -65,187 +65,183 @@
         </div>
       </section>
       <section class="lg:my-20 mb-10">
-        <div class="container">
-          <div class="accordion-wrapper">
-            <!-- ACCORDION 1 -->
-            <div class="accordion-box border-[1px] border-white overflow-hidden">
-              <input type="checkbox" name="accordion" id="acc-1" class="peer hidden" />
-              <label for="acc-1" class="accordion-header flex justify-between items-center md:py-8 md:px-6 px-4 py-4 cursor-pointer select-none transition-colors duration-300 peer-checked:[&>img]:rotate-90">
-                <div class="wrap flex items-center gap-3">
-                  <h4 class="uppercase !font-manrope">order id :</h4>
-                  <h4 class="uppercase !font-manrope">#5502</h4>
+        <div class="container space-y-10">
+          <div class="wrap flex flex-col gap-4 text-accent/80 border border-accent/10 rounded-2xl bg-slate backdrop-blur-2xl p-8">
+            <h5 class="uppercase !font-manrope">Order id : #5502</h5>
+            <hr class="border-[1px] border-accent/5" />
+            <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">immanuel hirani</h6>
+            <div class="wrap flex items-center gap-8">
+              <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Estimated Date</h6>
+              <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">2025 / 12 / 23</h6>
+            </div>
+            <div class="wrap flex items-center gap-8">
+              <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Tracking status</h6>
+              <label for="" class="py-1 px-6 capitalize bg-secondary md: text-white rounded-full 3xl:text-[18px] md:text-[16px] !font-manrope text-[14px]">Finish</label>
+            </div>
+            <div class="wrap flex items-center gap-8">
+              <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Payment status</h6>
+              <label for="" class="py-1 px-6 capitalize bg-success text-white rounded-full 3xl:text-[18px] md:text-[16px] !font-manrope text-[14px]">Paid</label>
+            </div>
+          </div>
+          <div class="treatment-list mt-4 grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 gap-10">
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
                 </div>
-                <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
-              </label>
-              <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] transition-all ease-in-out duration-500 overflow-x-hidden overflow-y-auto">
-                <div class="content md:pb-8 pb-4 flex flex-col md:px-6 px-4 gap-6">
-                  <div class="wrap flex flex-col gap-4 text-accent/80">
-                    <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">immanuel hirani</h6>
-                    <div class="wrap flex items-center gap-8">
-                      <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Estimated Date</h6>
-                      <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">2025 / 12 / 23</h6>
-                    </div>
-                    <div class="wrap flex items-center gap-8">
-                      <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Tracking status</h6>
-                      <label for="" class="py-1 px-6 capitalize bg-secondary md: text-white rounded-full 3xl:text-[18px] md:text-[16px] !font-manrope text-[14px]">Finish</label>
-                    </div>
-                    <div class="wrap flex items-center gap-8">
-                      <h6 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Payment status</h6>
-                      <label for="" class="py-1 px-6 capitalize bg-success text-white rounded-full 3xl:text-[18px] md:text-[16px] !font-manrope text-[14px]">Paid</label>
-                    </div>
-                  </div>
-                  <div class="treatment-list mt-4 grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-3">
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card w-full md:h-[14rem] h-full flex md:flex-row flex-col justify-between gap-4 p-4 border border-secondary">
-                      <div class="left-content md:w-[50%] w-full h-full">
-                        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-full w-full object-cover" alt="" />
-                      </div>
-                      <div class="right-content md:w-[50%] w-full flex flex-col gap-4">
-                        <div class="wrap flex items-center justify-between gap-1">
-                          <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
-                          <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
-                        </div>
-                        <div class="wrapper mt-auto space-y-3">
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
-                          </div>
-                          <div class="wrap flex flex-col gap-1">
-                            <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
-                            <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Air_Jordan_1_Banned.jpg/1200px-Air_Jordan_1_Banned.jpg" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card w-full rounded-2xl bg-slate backdrop-blur-2xl h-fit flex flex-col justify-between gap-6 p-8 border border-accent/10">
+              <div class="wrap flex items-center justify-between gap-1">
+                <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px] uppercase">item id</p>
+                <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">#18495</p>
+              </div>
+              <img src="https://cdn.thewirecutter.com/wp-content/media/2024/08/gym-bag-2048px-0484.jpg?auto=webp&quality=75&width=1024" class="h-[15rem] w-full object-cover rounded-lg" alt="" />
+              <div class="wrapper mt-auto space-y-3">
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Treatment Name</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Deep Clean Shoes</p>
+                </div>
+                <div class="wrap flex flex-col gap-1">
+                  <p class="text-secondary !font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Note</p>
+                  <p class="!font-manrope 3xl:text-[18px] md:text-[16px] text-[14px]">Printilan Gym (6 item)</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <footer>
-        <div class="container flex items-center justify-center text-center flex-col h-svh md:gap-20 gap-10">
-          <h4 class="uppercase">shoe box</h4>
-          <div class="wrap flex items-center md:gap-10 gap-5">
-            <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-6 rounded-full flex items-center justify-center outline outline-secondary">
-              <img src="./assets/svg/facebook.svg" class="w-fit h-fit" alt="" />
-            </div>
-            <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline outline-secondary">
-              <img src="./assets/svg/whatsapp.svg" class="w-fit h-fit" alt="" />
-            </div>
-            <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline outline-secondary">
-              <img src="./assets/svg/instagram.svg" class="w-fit h-fit" alt="" />
-            </div>
-          </div>
-          <h4 class="uppercase">2023 © Shoeboxx. All Rights Reserved.</h4>
-        </div>
-      </footer>
+
     </main>
+    <footer>
+      <div class="container flex items-center justify-center text-center flex-col h-svh md:gap-20 gap-10">
+        <h4 class="uppercase">shoe box</h4>
+        <div class="wrap flex items-center md:gap-10 gap-5">
+          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-6 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+            <img src="./assets/svg/facebook.svg" class="w-fit h-fit" alt="" />
+          </div>
+          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+            <img src="./assets/svg/whatsapp.svg" class="w-fit h-fit" alt="" />
+          </div>
+          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+            <img src="./assets/svg/instagram.svg" class="w-fit h-fit" alt="" />
+          </div>
+        </div>
+        <h4 class="uppercase">2023 © Shoeboxx. All Rights Reserved.</h4>
+      </div>
+    </footer>
   </body>
   <script src="./js/navbar.js"></script>
 </html>
