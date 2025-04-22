@@ -62,6 +62,18 @@ html * {
   @apply scroll-smooth  font-merchant;
 }
 
+html,
+body {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @layer utilities {
   /* Fonts Rules */
   h1 {

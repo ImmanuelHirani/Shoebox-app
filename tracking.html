@@ -8,19 +8,37 @@
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <nav class="fixed inset-x-0 top-0 lg:mt-12 md:mt-6 mt-3 z-50">
+    <nav class="fixed inset-x-0 top-0 lg:mt-12 md:mt-6 mt-0.5 z-50">
       <div class="container flex items-center justify-between font-merchant uppercase">
-        <ul>
-          <li><a href="index.html" class="md:text-[30px] text-[32px]">SBX.ID</a></li>
+        <ul id="navBrand">
+          <li><a href="index.html" class="md:text-[30px] text-[20px] !font-manrope tracking-[0.1rem]">SBX.ID</a></li>
         </ul>
-        <ul class="hidden items-center gap-10">
-          <li><a href="index.html" class="lg:text-[20px] md:text-[20px]">Home</a></li>
-          <li><a href="tracking.html" class="lg:text-[20px] md:text-[20px]">Tracking</a></li>
-          <li><a href="service.html" class="lg:text-[20px] md:text-[20px]">Service</a></li>
+        <ul id="navLinks" class="md:flex hidden items-center gap-10">
+          <li><a href="index.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Home</a></li>
+          <li><a href="tracking.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Tracking</a></li>
+          <li><a href="service.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Service</a></li>
         </ul>
-        <button class="lg:w-[3.5rem] cursor-pointer lg:h-[3.5rem] w-[3rem] h-[3rem] rounded-full flex items-center md:p-3.5 p-3 justify-center bg-secondary">
+        <button id="burgerBtn" class="lg:w-[3.5rem] cursor-pointer relative z-50 lg:h-[3.5rem] w-[3rem] h-[3rem] rounded-full flex items-center md:p-3.5 p-3 justify-center bg-secondary">
           <img src="./assets/svg/burgerToggle.svg" alt="" />
         </button>
+        <div id="navBarExpands" class="fixed inset-y-0 right-0 md:w-[40rem] w-full md:bg-primary/30 bg-primary/50 md:backdrop-blur-2xl backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out md:py-42 py-24 z-40">
+          <div class="wrapper flex flex-col gap-3 w-full h-full md:px-20 px-6">
+            <h5 class="uppercase text-accent/60 md:text-xl tracking-[0.1rem] !font-manrope">Navigation</h5>
+            <ul class="wrap border-t-[1px] border-accent/60 py-8 flex flex-col gap-4">
+              <li><a href="index.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">Home </a></li>
+              <li><a href="tracking.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">tracking</a></li>
+              <li><a href="service.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">service</a></li>
+            </ul>
+            <div class="wrap mt-auto space-y-3">
+              <h5 class="uppercase text-accent/60 md:text-xl tracking-[0.1rem] !font-manrope">Social</h5>
+              <div class="wrap flex items-center md:gap-6 gap-3 border-t-[1px] border-accent/60 pt-6">
+                <a href="" class="md:text-[16px] text-[12px] tracking-[0.1rem] !font-manrope">facebook</a>
+                <a href="" class="md:text-[16px] text-[12px] tracking-[0.1rem] !font-manrope">what's app</a>
+                <a href="" class="md:text-[16px] text-[12px] tracking-[0.1rem] !font-manrope">instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
     <main>
@@ -34,120 +52,15 @@
               </div>
               <h2 class="uppercase leading-[130%]">Tracking Treatment</h2>
             </div>
-            <div class="accordion-wrapper">
-              <!-- ACCORDION 1 -->
-              <div class="accordion-box border-t-1 border-r-0 border-l-0 border-b-[1px] border-white overflow-hidden">
-                <input type="radio" name="accordion" id="acc-1" class="peer hidden" />
-                <label for="acc-1" class="accordion-header flex justify-between items-center md:py-8 px-0 py-4 cursor-pointer select-none transition-colors duration-300 peer-checked:[&>img]:rotate-90">
-                  <h4 class="uppercase">Deep Clean Shoe</h4>
-                  <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
-                </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:pb-8 pb-4 flex flex-col px-0 gap-6">
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- ACCORDION 2 -->
-              <div class="accordion-box border-t-1 border-r-0 border-l-0 border-b-[1px] border-white overflow-hidden">
-                <input type="radio" name="accordion" id="acc-2" class="peer hidden" />
-                <label for="acc-2" class="accordion-header flex justify-between items-center md:py-8 px-0 py-4 cursor-pointer select-none transition-colors duration-300 peer-checked:[&>img]:rotate-90">
-                  <h4 class="uppercase">Deep Clean Ransel</h4>
-                  <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
-                </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:pb-8 pb-4 flex flex-col px-0 gap-6">
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion 3 -->
-              <div class="accordion-box border-t-1 border-r-0 border-l-0 border-b-[1px] border-white overflow-hidden">
-                <input type="radio" name="accordion" id="acc-3" class="peer hidden" />
-                <label for="acc-3" class="accordion-header flex justify-between items-center md:py-8 px-0 py-4 cursor-pointer select-none transition-colors duration-300 peer-checked:[&>img]:rotate-90">
-                  <h4 class="uppercase">Hand Stitching Regular</h4>
-                  <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
-                </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:pb-8 pb-4 flex flex-col px-0 gap-6">
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion 4 -->
-              <div class="accordion-box border-t-1 border-r-0 border-l-0 border-b-[1px] border-white overflow-hidden">
-                <input type="radio" name="accordion" id="acc-4" class="peer hidden" />
-                <label for="acc-4" class="accordion-header flex justify-between items-center md:py-8 px-0 py-4 cursor-pointer select-none transition-colors duration-300 peer-checked:[&>img]:rotate-90">
-                  <h4 class="uppercase">Repaint Canvas Sneakers</h4>
-                  <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
-                </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:pb-8 pb-4 flex flex-col px-0 gap-6">
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                    <div class="wrap flex items-center justify-between gap-3 text-accent/80">
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Deep Clean Ransel</h5>
-                      <h5 class="capitalize !font-manrope hyphens-auto break-words tracking-tight">Rp.200.000</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <form action="" class="w-full">
+              <label for="" class="py-10 flex items-center md:gap-20 gap-5 w-full border-t-[1px] border-b-[1px] border-accent">
+                <input type="text" class="w-full md:text-[26px] text-[20px] !font-merchant outline-none text-accent placeholder:uppercase" placeholder="tracking id" />
+              </label>
+              <label for="" class="py-10 flex items-center md:gap-20 gap-5 w-full border-t-[1px] border-b-[1px] border-accent">
+                <input type="text" class="w-full md:text-[26px] text-[20px] !font-merchant outline-none text-accent placeholder:uppercase" placeholder="phone number" />
+              </label>
+              <button type="submit" class="w-full cursor-pointer md:h-[6.5rem] h-[3.5rem] mt-6 lg:h-[4rem] bg-secondary rounded-lg md:text-[26px] text-[20px] font-merchant uppercase">track your order</button>
+            </form>
           </div>
         </div>
       </section>
@@ -170,4 +83,5 @@
       </footer>
     </main>
   </body>
+  <script src="./js/navbar.js"></script>
 </html>
