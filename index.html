@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   </head>
   <body class="">
-    <nav class="fixed inset-x-0 top-0 lg:mt-12 md:mt-6 mt-0.5 z-50">
-      <div class="container flex items-center justify-between font-merchant uppercase">
-        <ul id="navBrand">
+    <nav class="fixed inset-x-0 top-0 lg:mt-12 md:mt-6 mt-2 z-50">
+      <div class="container relative flex items-center justify-between font-merchant uppercase">
+        <ul id="navBrand" class="flex items-center justify-between w-full">
           <li><a href="index.html" class="md:text-[30px] text-[20px] !font-manrope tracking-[0.1rem]">SBX.ID</a></li>
+          <li id="menuExpands" class="md:hidden"><button class="md:text-[30px] text-[20px] !font-manrope tracking-[0.1rem] uppercase">.menu</button></li>
         </ul>
-        <ul id="navLinks" class="md:flex hidden items-center gap-10">
+        <ul id="navLinks" class="md:flex hidden items-center xl:gap-10 gap-5">
           <li><a href="index.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Home</a></li>
           <li><a href="tracking.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Tracking</a></li>
           <li><a href="service.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Service</a></li>
         </ul>
-        <button id="burgerBtn" class="lg:w-[3.5rem] cursor-pointer relative z-50 lg:h-[3.5rem] w-[3rem] h-[3rem] rounded-full flex items-center md:p-3.5 p-3 justify-center bg-secondary">
+        <button id="burgerBtn" class="lg:w-[3.5rem] cursor-pointer absolute lg:right-0 right-4 scale-0 z-50 lg:h-[3.5rem] w-[3rem] h-[3rem] rounded-full flex items-center md:p-3.5 p-3 justify-center bg-secondary">
           <img src="./assets/svg/burgerToggle.svg" alt="" />
         </button>
-        <div id="navBarExpands" class="fixed inset-y-0 right-0 md:w-[40rem] w-full md:bg-slate/80 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out md:py-42 py-24 z-40">
+        <div id="navBarExpands" class="fixed inset-y-0 right-0 md:w-[40rem] w-full bg-slate/80 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out md:py-42 py-24 z-40">
+          <button id="closeBtn" class="lg:w-[3.5rem] cursor-pointer md:hidden absolute lg:right-0 top-4 scale-0 opacity-0 right-4 z-50 lg:h-[3.5rem] w-[3rem] h-[3rem] rounded-full flex items-center md:p-3.5 p-3 justify-center bg-secondary">
+            <img src="./assets/svg/burgerToggle.svg" alt="" />
+          </button>
           <div class="wrapper flex flex-col gap-3 w-full h-full md:px-20 px-6">
-            <h5 class="uppercase text-accent/60 md:text-xl tracking-[0.1rem] !font-manrope">Navigation</h5>
+            <h5 class="uppercase text-accent/60 text-base tracking-[0.1rem] !font-manrope">Navigation</h5>
             <ul class="wrap border-t-[1px] border-accent/60 py-8 flex flex-col gap-4 transition-all ease-in-out duration-500">
-              <li class="hover:list-disc list-inside transition-all ease-in-out duration-500"><a href="index.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">Home </a></li>
-              <li class="hover:list-disc list-inside transition-all ease-in-out duration-500"><a href="tracking.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">tracking</a></li>
-              <li class="hover:list-disc list-inside transition-all ease-in-out duration-500"><a href="service.html" class="lg:text-[42px] text-[20px] tracking-[0.1rem] !font-manrope">service</a></li>
+              <li class="hover:list-disc transition-all ease-in-out duration-500"><a href="index.html" class="lg:text-[42px] text-[32px] tracking-[0.1rem] !font-manrope">Home </a></li>
+              <li class="hover:list-disc transition-all ease-in-out duration-500"><a href="tracking.html" class="lg:text-[42px] text-[32px] tracking-[0.1rem] !font-manrope">tracking</a></li>
+              <li class="hover:list-disc transition-all ease-in-out duration-500"><a href="service.html" class="lg:text-[42px] text-[32px] tracking-[0.1rem] !font-manrope">service</a></li>
             </ul>
             <div class="wrap mt-auto space-y-3">
-              <h5 class="uppercase text-accent/60 md:text-xl tracking-[0.1rem] !font-manrope">Social</h5>
+              <h5 class="uppercase text-accent/60 text-base tracking-[0.1rem] !font-manrope">Social</h5>
               <div class="wrap flex items-center md:gap-6 gap-3 border-t-[1px] border-accent/60 pt-6">
                 <a href="" class="md:text-[16px] text-[12px] tracking-[0.1rem] !font-manrope">facebook</a>
                 <a href="" class="md:text-[16px] text-[12px] tracking-[0.1rem] !font-manrope">what's app</a>
@@ -45,17 +51,21 @@
         <div class="wrapper mx-auto 3xl:max-w-[90rem] xl:max-w-6xl md:max-3xl w-full self-center">
           <h1 class="uppercase md:text-center text-start font-extralight leading-[130%]">SHOEBOX PREMIUM SHOE <span class="text-secondary"> REPAIR & RESTORATION</span></h1>
         </div>
-        <div class="after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[10rem] -z-10 md:right-0 right-4 lg:bottom-[10%] md:bottom-[20%] bottom-[50%] after:z-10">
+        <div class="img1 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[10rem] -z-10 md:right-0 right-4 lg:bottom-[10%] md:bottom-[20%] bottom-[50%] after:z-10">
           <img src="./assets/image/BG-3.jpg" class="w-full h-full object-cover" alt="" />
         </div>
-        <div class="after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[20rem] -z-10 md:left-0 left-4 translate-y-1/2 lg:bottom-[42%] md:bottom-[60%] bottom-[30%] after:z-10">
+        <div class="img2 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[20rem] -z-10 md:left-0 left-4 translate-y-1/2 lg:bottom-[42%] md:bottom-[60%] bottom-[30%] after:z-10">
           <img src="./assets/image/BG-4.jpg" class="w-full h-full object-cover" alt="" />
         </div>
       </header>
       <section class="h-svh flex items-center justify-center">
         <div class="container md:space-y-32 space-y-16">
-          <h5 class="font-manrope uppercase tracking-[5%] text-center">Shoe Repair History</h5>
-          <h2 class="uppercase leading-[130%]"><span class="text-secondary">With over 21,000 shoes restored and 2,300+ satisfied customers</span>, SHOEBOX grows with 2 branches in the heart of Jakarta.</h2>
+          <div class="reveal-wrapper overflow-hidden block">
+            <h5 class="reveal-text font-manrope uppercase tracking-[5%] text-center">Shoe Repair History</h5>
+          </div>
+          <div class="reveal-wrapper overflow-hidden block">
+            <h2 class="reveal-text uppercase leading-[130%]"><span class="text-secondary">With over 21,000 shoes restored and 2,300+ satisfied customers</span>, SHOEBOX grows with 2 branches in the heart of Jakarta.</h2>
+          </div>
         </div>
       </section>
       <section class="h-svh">
@@ -94,8 +104,8 @@
       </section>
       <section class="flex items-center justify-center">
         <div class="container md:space-y-32 space-y-16">
-          <h5 class="font-manrope uppercase tracking-[5%] text-center">services</h5>
-          <h2 class="uppercase leading-[130%]">
+          <h5 class="font-manrope uppercase tracking-[5%] text-center reveal-text">services</h5>
+          <h2 class="uppercase leading-[130%] reveal-text">
             Shoe Repair & <br />
             Leather<span class="text-secondary"> Services</span>
           </h2>
@@ -139,7 +149,7 @@
           </div>
         </div>
       </section>
-      <section class="relative md:my-40 my-28 lg:h-fit md:h-[25rem] h-[15rem]">
+      <section class="relative md:my-40 my-28 lg:h-fit md:h-[25rem] h-[15rem] image-zoom">
         <div class="wrap after:absolute after:inset-0 after:bg-black/30 h-full after:z-10">
           <img src="./assets/image/BG-1.jpg" class="w-full h-full" alt="" />
         </div>
@@ -147,8 +157,8 @@
       <section class="relative md:mt-40 mt-28 md:mb-44 mb-24">
         <div class="container flex flex-col md:gap-20 gap-10 justify-center items-center w-full">
           <div class="wrapper-information w-full md:space-y-20 space-y-10">
-            <h2 class="uppercase leading-[130%] text-center">Connect With Us</h2>
-            <div class="accordion-wrapper">
+            <h2 class="uppercase leading-[130%] text-center reveal-text">Connect With Us</h2>
+            <div class="accordion-wrapper reveal-accordion">
               <!-- ACCORDION 1 -->
               <div class="accordion-box border border-b-0 border-white overflow-hidden">
                 <input type="radio" name="accordion" id="acc-1" class="peer hidden" />
@@ -156,8 +166,8 @@
                   <h4 class="uppercase">Shoe Box Karawaci</h4>
                   <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
                 </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:p-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-700 opacity-0 peer-checked:opacity-100">
+                  <div class="content md:p-8 p-4 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
                     <div class="wrap flex flex-col gap-3">
                       <h5 class="uppercase text-secondary !font-manrope">Phone number</h5>
                       <h5 class="uppercase !font-manrope hyphens-auto break-words tracking-tight">+62 - 812 - 9942 - 5292</h5>
@@ -184,8 +194,8 @@
                   <h4 class="uppercase">Shoe Box Galungung</h4>
                   <img src="./assets/svg/chevron.svg" alt="toggle" class="transform transition-transform duration-300 md:w-[2rem] w-[1.5rem]" />
                 </label>
-                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-500">
-                  <div class="content md:p-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                <div class="accordion-body max-h-0 peer-checked:max-h-[1000px] overflow-hidden transition-all ease-in-out duration-700 opacity-0 peer-checked:opacity-100">
+                  <div class="content md:p-8 p-4 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
                     <div class="wrap flex flex-col gap-3">
                       <h5 class="uppercase text-secondary !font-manrope">Phone number</h5>
                       <h5 class="uppercase !font-manrope hyphens-auto break-words tracking-tight">+62 - 812 - 9942 - 5292</h5>
@@ -209,8 +219,8 @@
           </div>
           <h5 class="font-manrope uppercase tracking-[5%] text-center">or</h5>
           <div class="wrapper-contact flex items-center w-full flex-col md:gap-20 gap-10">
-            <h2 class="uppercase leading-[130%] text-center">Slide Into Our Inbox</h2>
-            <form action="" class="w-full">
+            <h2 class="uppercase leading-[130%] text-center reveal-text">Slide Into Our Inbox</h2>
+            <form action="" class="w-full reveal-form">
               <label for="" class="py-10 flex items-center md:gap-20 gap-5 w-full border-t-[1px] border-b-[1px] border-accent">
                 <h4 class="text-accent/50">01</h4>
                 <input type="text" class="w-full md:text-[26px] text-[20px] !font-merchant outline-none text-accent" placeholder="Your Name" />
@@ -232,23 +242,23 @@
           </div>
         </div>
       </section>
-      <section class="relative md:my-40 my-28 lg:h-fit md:h-[25rem] h-[15rem]">
+      <section class="relative md:my-40 my-28 lg:h-fit md:h-[25rem] h-[15rem] image-zoom">
         <div class="wrap after:absolute after:inset-0 after:bg-black/30 h-full after:z-10">
           <img src="./assets/image/BG-2.png" class="w-full h-full" alt="" />
         </div>
       </section>
     </main>
     <footer>
-      <div class="container flex items-center justify-center text-center flex-col h-svh md:gap-20 gap-10">
+      <div class="container footer-container flex items-center justify-center text-center flex-col h-svh md:gap-20 gap-10">
         <h4 class="uppercase">shoe box</h4>
         <div class="wrap flex items-center md:gap-10 gap-5">
-          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-6 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+          <div class="icon footer-icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
             <img src="./assets/svg/facebook.svg" class="w-fit h-fit" alt="" />
           </div>
-          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+          <div class="icon footer-icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
             <img src="./assets/svg/whatsapp.svg" class="w-fit h-fit" alt="" />
           </div>
-          <div class="icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
+          <div class="icon footer-icon md:w-[10rem] w-[4rem] md:h-[10rem] h-[4rem] p-4 rounded-full flex items-center justify-center outline hover:bg-slate transition-all ease-in-out duration-500 cursor-pointer outline-accent">
             <img src="./assets/svg/instagram.svg" class="w-fit h-fit" alt="" />
           </div>
         </div>
@@ -256,5 +266,7 @@
       </div>
     </footer>
   </body>
-  <script src="./js/navbar.js"></script>
+  <script type="module" src="./js/NavbarGSAP.js"></script>
+  <script type="module" src="./js/HomepageGSAP.js"></script>
+  <script type="module" src="./js/FooterGSAP.js"></script>
 </html>
