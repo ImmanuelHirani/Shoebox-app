@@ -1,10 +1,5 @@
 // === TIMELINES ===
-const navTl = gsap.timeline({ paused: true, reversed: true })
-.fromTo("#navBarExpands", { x: "100%" }, { x: "0%", duration: 0.4, ease: "power1.inOut" }, 0)
-.fromTo("#navBarExpands h5", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3, ease: "power1.inOut" }, "-=0.3")
-.fromTo("#navBarExpands ul li", { x: 30, autoAlpha: 0 }, { x: 0, autoAlpha: 1, stagger: 0.08, duration: 0.4, ease: "power1.inOut" }, "-=0.25")
-.fromTo("#navBarExpands .wrap.mt-auto a", { y: 10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.06, duration: 0.3, ease: "power1.inOut" }, "-=0.25")
-.to("#closeBtn", { scale: 1, opacity: 1 });
+const navTl = gsap.timeline({ paused: true, reversed: true }).fromTo("#navBarExpands", { x: "100%" }, { x: "0%", duration: 0.4, ease: "power1.inOut" }, 0).fromTo("#navBarExpands h5", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3, ease: "power1.inOut" }, "-=0.3").fromTo("#navBarExpands ul li", { x: 30, autoAlpha: 0 }, { x: 0, autoAlpha: 1, stagger: 0.08, duration: 0.4, ease: "power1.inOut" }, "-=0.25").fromTo("#navBarExpands .wrap.mt-auto a", { y: 10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.06, duration: 0.3, ease: "power1.inOut" }, "-=0.25").to("#closeBtn", { scale: 1, opacity: 1 });
 
 const scrollTl = gsap.timeline({ paused: true });
 window.addEventListener("DOMContentLoaded", () => {
@@ -54,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   function closeNav() {
     document.documentElement.style.overflow = document.body.style.overflow = "";
-    navTl.reverse();
+    navTl.timeScale(1.2).reverse(); // Speed up reverse
     navOpen = false;
   }
 

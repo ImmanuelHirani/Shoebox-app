@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="./css/output.css" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
-  <body class="overflow-x-hidden">
+  <body>
     <nav class="fixed inset-x-0 top-0 lg:mt-12 md:mt-6 mt-2 z-50">
       <div class="container relative flex items-center justify-between font-merchant uppercase">
         <ul id="navBrand" class="flex items-center justify-between w-full">
           <li><a href="index.html" class="md:text-[30px] text-[20px] !font-manrope tracking-[0.1rem]">SBX.ID</a></li>
           <li id="menuExpands" class="md:hidden"><button class="md:text-[30px] text-[20px] !font-manrope tracking-[0.1rem] uppercase">.menu</button></li>
         </ul>
-        <ul id="navLinks" class="md:flex hidden items-center xl:gap-10 gap-5">
+        <ul id="navLinks" class="md:flex hidden items-center xl:gap-10 gap-8">
           <li><a href="index.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Home</a></li>
           <li><a href="tracking.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Tracking</a></li>
           <li><a href="service.html" class="text-[20px] !font-manrope tracking-[0.1rem]">Service</a></li>
@@ -51,10 +53,10 @@
         <div class="wrapper mx-auto 3xl:max-w-[90rem] xl:max-w-6xl md:max-3xl w-full self-center">
           <h1 class="uppercase md:text-center text-start font-extralight leading-[130%]">SHOEBOX PREMIUM SHOE <span class="text-secondary"> REPAIR & RESTORATION</span></h1>
         </div>
-        <div class="img1 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[10rem] -z-10 md:right-0 right-4 lg:bottom-[10%] md:bottom-[20%] bottom-[50%] after:z-10">
+        <div class="img1 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[10rem] -z-10 lg:right-0 right-4 lg:bottom-[10%] md:bottom-[20%] bottom-[50%] after:z-10">
           <img src="./assets/image/BG-3.jpg" class="w-full h-full object-cover" alt="" />
         </div>
-        <div class="img2 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[20rem] -z-10 md:left-0 left-4 translate-y-1/2 lg:bottom-[42%] md:bottom-[60%] bottom-[30%] after:z-10">
+        <div class="img2 after:absolute after:inset-0 after:bg-black/30 absolute rounded-lg overflow-hidden lg:w-fit md:w-[20rem] md:h-fit w-[8rem] h-[20rem] -z-10 lg:left-0 left-4 translate-y-1/2 lg:bottom-[42%] md:bottom-[60%] bottom-[30%] after:z-10">
           <img src="./assets/image/BG-4.jpg" class="w-full h-full object-cover" alt="" />
         </div>
       </header>
@@ -68,38 +70,44 @@
           </div>
         </div>
       </section>
-      <section class="h-svh">
+      <section class="h-svh relative swiper-section">
         <div class="md:space-y-32 space-y-16">
-          <h5 class="font-manrope uppercase tracking-[5%] text-center">What Sets Us Apart</h5>
+          <h5 class="font-manrope uppercase tracking-[5%] text-center reveal-text">What Sets Us Apart</h5>
           <div class="swiper relative">
-            <div class="swiper-wrapper flex items-center gap-3 w-full overflow-hidden">
+            <div class="swiper-wrapper w-full">
               <div class="swiper-slide relative">
-                <div class="card 3xl:w-[30rem] lg:h-[25rem] md:h-[20rem] md:w-[20rem] w-[15rem] lg:w-[25rem] h-[15rem] relative after:absolute after:inset-0 after:bg-black/50 after:z-10">
-                  <img src="./assets/image/whyUs/WY-1.jpg" class="h-full w-full object-cover" alt="" />
+                <div class="card relative after:absolute after:inset-0 after:bg-black/50 after:z-10 whatSetUs overflow-hidden">
+                  <img src="./assets/image/whyUs/WY-1.jpg" data-swiper-parallax="-50%" class="h-full w-full object-center transition-all ease-in-out duration-500" alt="" />
                   <h5 class="absolute z-20 uppercase right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2 text-center h-fit w-full">Expert Care and Attention</h5>
                 </div>
               </div>
               <div class="swiper-slide relative">
-                <div class="card 3xl:w-[30rem] lg:h-[25rem] md:h-[20rem] md:w-[20rem] w-[15rem] lg:w-[25rem] h-[15rem] relative after:absolute after:inset-0 after:bg-black/50 after:z-10">
-                  <img src="./assets/image/whyUs/WY-2.jpg" class="h-full w-full object-cover" alt="" />
+                <div class="card relative after:absolute after:inset-0 after:bg-black/50 after:z-10 whatSetUs overflow-hidden">
+                  <img src="./assets/image/whyUs/WY-2.jpg" data-swiper-parallax="-50%" class="h-full w-full object-center transition-all ease-in-out duration-500" alt="" />
                   <h5 class="absolute z-20 uppercase right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2 text-center h-fit w-full">Affordable prices</h5>
                 </div>
               </div>
               <div class="swiper-slide relative">
-                <div class="card 3xl:w-[30rem] lg:h-[25rem] md:h-[20rem] md:w-[20rem] w-[15rem] lg:w-[25rem] h-[15rem] relative after:absolute after:inset-0 after:bg-black/50 after:z-10">
-                  <img src="./assets/image/whyUs/WY-3.jpg" class="h-full w-full object-cover" alt="" />
+                <div class="card relative after:absolute after:inset-0 after:bg-black/50 after:z-10 whatSetUs overflow-hidden">
+                  <img src="./assets/image/whyUs/WY-3.jpg" data-swiper-parallax="-50%" class="h-full w-full object-center transition-all ease-in-out duration-500" alt="" />
                   <h5 class="absolute z-20 uppercase right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2 text-center h-fit w-full">Attention to Detail</h5>
                 </div>
               </div>
               <div class="swiper-slide relative">
-                <div class="card 3xl:w-[30rem] lg:h-[25rem] md:h-[20rem] md:w-[20rem] w-[15rem] lg:w-[25rem] h-[15rem] relative after:absolute after:inset-0 after:bg-black/50 after:z-10">
-                  <img src="./assets/image/whyUs/WY-4.jpg" class="h-full w-full object-cover" alt="" />
+                <div class="card relative after:absolute after:inset-0 after:bg-black/50 after:z-10 whatSetUs overflow-hidden">
+                  <img src="./assets/image/whyUs/WY-4.jpg" data-swiper-parallax="-50%" class="h-full w-full object-center transition-all ease-in-out duration-500" alt="" />
                   <h5 class="absolute z-20 uppercase right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2 text-center h-fit w-full">Customer Satisfaction Guarantee</h5>
                 </div>
               </div>
+              <div class="swiper-slide relative">
+                <div class="card relative after:absolute after:inset-0 after:bg-black/50 after:z-10 whatSetUs overflow-hidden">
+                  <img src="./assets/image/whyUs/WY-3.jpg" data-swiper-parallax="-50%" class="h-full w-full object-center transition-all ease-in-out duration-500" alt="" />
+                  <h5 class="absolute z-20 uppercase right-1/2 translate-x-1/2 translate-y-1/2 bottom-1/2 text-center h-fit w-full">Attention to Detail</h5>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="lg:w-[10rem] cursor-pointer md:w-[6.5rem] z-20 md:h-[6.5rem] w-[6rem] h-[6rem] lg:h-[10rem] top-[80%] right-[5%] absolute bg-secondary rounded-full md:text-[26px] text-[20px] font-merchant">Drag</button>
           </div>
+          <div class="outline outline-accent/10 z-20 xl:top-[72%] lg:top-[33%] md:top-[29rem] top-[45%] right-[5%] absolute rounded-full md:text-[26px] text-[20px] p-2 font-merchant drag-button flex items-center justify-center transition-all duration-300 ease-in-out"><button class="lg:w-[10rem] cursor-grab active:cursor-grabbing md:w-[6.5rem] md:h-[6.5rem] w-[6rem] h-[6rem] lg:h-[10rem] bg-secondary rounded-full">Drag</button></div>
         </div>
       </section>
       <section class="flex items-center justify-center">
@@ -236,7 +244,7 @@
               <label for="" class="border-t-[1px] relative py-10 flex items-start md:gap-20 gap-5 w-full border-b-[1px] border-accent font-merchant">
                 <h4 class="text-accent/50">04</h4>
                 <textarea name="" class="w-full md:text-[26px] y-10 text-[20px] outline-none resize-none text-accent !font-merchant" placeholder="Messages" rows="5" id=""></textarea>
-                <button type="submit" class="lg:w-[10rem] cursor-pointer md:w-[6.5rem] md:h-[6.5rem] w-[6rem] h-[6rem] lg:h-[10rem] lg:top-[70%] md:top-[80%] top-[75%] right-[5%] absolute bg-secondary rounded-full md:text-[26px] text-[20px] font-merchant">SEND</button>
+                <button type="submit" class="lg:w-[10rem] reveal-send-button cursor-pointer md:w-[6.5rem] md:h-[6.5rem] w-[6rem] h-[6rem] lg:h-[10rem] lg:top-[70%] md:top-[80%] top-[75%] right-[5%] absolute bg-secondary rounded-full md:text-[26px] text-[20px] font-merchant">SEND</button>
               </label>
             </form>
           </div>
@@ -248,7 +256,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="overflow-hidden">
       <div class="container footer-container flex items-center justify-center text-center flex-col h-svh md:gap-20 gap-10">
         <h4 class="uppercase">shoe box</h4>
         <div class="wrap flex items-center md:gap-10 gap-5">
@@ -269,4 +277,6 @@
   <script type="module" src="./js/NavbarGSAP.js"></script>
   <script type="module" src="./js/HomepageGSAP.js"></script>
   <script type="module" src="./js/FooterGSAP.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/Swiper.js"></script>
 </html>
